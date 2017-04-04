@@ -1,0 +1,16 @@
+PODS:
+  - Dots (0.1.0)
+
+DEPENDENCIES:
+  - Dots (from `../`)
+
+EXTERNAL SOURCES:
+  Dots:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Dots: 4af130d4da19a03efe0473b9c230795ba45073c2
+
+PODFILE CHECKSUM: e4c9b40db8cd72126b3d47b5af04e47cf6bb2b46
+
+COCOAPODS: 1.2.0
