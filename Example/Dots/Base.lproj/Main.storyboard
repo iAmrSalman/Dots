@@ -1,25 +1,87 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Dots_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pJK-Vu-PNr">
+                                <rect key="frame" x="20" y="28" width="327" height="327"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pJK-Vu-PNr" secondAttribute="height" multiplier="1:1" id="JR8-bZ-1kP"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qUi-1j-ghi">
+                                <rect key="frame" x="355" y="28" width="292" height="327"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="qUi-1j-ghi" secondAttribute="bottom" constant="8" id="68z-bY-nED"/>
+                            <constraint firstItem="pJK-Vu-PNr" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="6he-xd-kFr"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="pJK-Vu-PNr" secondAttribute="bottom" constant="20" id="6no-fA-6sg"/>
+                            <constraint firstItem="qUi-1j-ghi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="8Ar-61-3AN"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="qUi-1j-ghi" secondAttribute="bottom" constant="20" id="8WW-ej-0BH"/>
+                            <constraint firstItem="qUi-1j-ghi" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="Dhy-D7-quF"/>
+                            <constraint firstItem="qUi-1j-ghi" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="J3f-kj-uDn"/>
+                            <constraint firstItem="qUi-1j-ghi" firstAttribute="leading" secondItem="pJK-Vu-PNr" secondAttribute="trailing" constant="8" id="Kgy-UH-B6r"/>
+                            <constraint firstItem="pJK-Vu-PNr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="V2K-AU-Duc"/>
+                            <constraint firstItem="qUi-1j-ghi" firstAttribute="top" secondItem="pJK-Vu-PNr" secondAttribute="bottom" id="dVw-lN-JBS"/>
+                            <constraint firstItem="pJK-Vu-PNr" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="fMh-NN-gKv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Dhy-D7-quF"/>
+                                <exclude reference="Kgy-UH-B6r"/>
+                                <exclude reference="6no-fA-6sg"/>
+                                <exclude reference="8WW-ej-0BH"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="6he-xd-kFr"/>
+                                <include reference="fMh-NN-gKv"/>
+                                <exclude reference="8Ar-61-3AN"/>
+                                <include reference="Dhy-D7-quF"/>
+                                <include reference="Kgy-UH-B6r"/>
+                                <exclude reference="dVw-lN-JBS"/>
+                                <exclude reference="68z-bY-nED"/>
+                                <include reference="6no-fA-6sg"/>
+                                <include reference="8WW-ej-0BH"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="pJK-Vu-PNr" id="ex3-4M-kao"/>
+                        <outlet property="textView" destination="qUi-1j-ghi" id="P0H-lt-gcu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="31.934032983508249" y="36"/>
         </scene>
     </scenes>
 </document>

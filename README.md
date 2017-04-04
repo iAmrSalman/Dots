@@ -1,6 +1,6 @@
 # Dots
 
-[![CI Status](http://img.shields.io/travis/Amr Salman/Dots.svg?style=flat)](https://travis-ci.org/Amr Salman/Dots)
+[![CI Status](http://img.shields.io/travis/iAmrSalman/Dots.svg?style=flat)](https://travis-ci.org/iAmrSalman/Dots)
 [![Version](https://img.shields.io/cocoapods/v/Dots.svg?style=flat)](http://cocoapods.org/pods/Dots)
 [![License](https://img.shields.io/cocoapods/l/Dots.svg?style=flat)](http://cocoapods.org/pods/Dots)
 [![Platform](https://img.shields.io/cocoapods/p/Dots.svg?style=flat)](http://cocoapods.org/pods/Dots)
