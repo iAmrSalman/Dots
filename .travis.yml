@@ -14,5 +14,5 @@ before_install:
 - gem install cocoapods # Since Travis is not always on latest version
 - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -workspace Example/Dots.xcworkspace -scheme Dots-Example -sdk iphonesimulator -destination \"platform=iOS Simulator,OS=10.0,name=iPhone 7\" ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -workspace Example/Dots.xcworkspace -scheme Dots-Example -sdk iphonesimulator -destination "platform=iOS Simulator,OS=10.0,name=iPhone 7" ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
