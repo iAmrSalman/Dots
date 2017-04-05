@@ -69,7 +69,7 @@ Dots.defualt.request("<URL>", method: .delete)
 
 The `request` method parameter defaults to `.get`.
 
-##### GET Request With URL-Encoded Parameters
+### Request With URL-Encoded Parameters
 
 ```swift
 let parameters: Parameters = ["foo": "bar"]
@@ -77,7 +77,7 @@ let parameters: Parameters = ["foo": "bar"]
 // All three of these calls are equivalent
 Dots.defualt.request("<URL>", parameters: parameters)
 
-// https://httpbin.org/get?foo=bar
+// <URL>?foo=bar
 ```
 
 ### HTTP Headers
