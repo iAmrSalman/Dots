@@ -15,9 +15,12 @@
 		921D5D541E93280200F8DAD5 /* DotsSessionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D5D531E93280200F8DAD5 /* DotsSessionConfiguration.swift */; };
 		921D5D561E93282D00F8DAD5 /* DotsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D5D551E93282D00F8DAD5 /* DotsError.swift */; };
 		921D5D581E93284500F8DAD5 /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D5D571E93284500F8DAD5 /* ConcurrentOperation.swift */; };
-		921D5D5A1E93288C00F8DAD5 /* DataLoadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D5D591E93288C00F8DAD5 /* DataLoadOperation.swift */; };
-		921D5D5C1E9328B800F8DAD5 /* DataOperationS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D5D5B1E9328B800F8DAD5 /* DataOperationS.swift */; };
+		921D5D5A1E93288C00F8DAD5 /* DataLoadOperationAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D5D591E93288C00F8DAD5 /* DataLoadOperationAsync.swift */; };
+		921D5D5C1E9328B800F8DAD5 /* DataOperationSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D5D5B1E9328B800F8DAD5 /* DataOperationSync.swift */; };
 		921D5D5F1E9328FC00F8DAD5 /* UIImageViewExtinsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D5D5E1E9328FC00F8DAD5 /* UIImageViewExtinsion.swift */; };
+		92DCD1581E93E40600AE84FE /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCD1571E93E40600AE84FE /* Dot.swift */; };
+		92DCD15A1E93E70E00AE84FE /* Concurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCD1591E93E70E00AE84FE /* Concurrency.swift */; };
+		92DCD15C1E93EA3500AE84FE /* DataLoadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCD15B1E93EA3500AE84FE /* DataLoadOperation.swift */; };
 		944EEACC6651843605C4DF3C7D343C5B /* Pods-Dots_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8C2E5A82B48B9D3DAE15FE9872414B /* Pods-Dots_Tests-dummy.m */; };
 		A25F4DCBB189FF0C9F957FA114CE975E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		A47D6C01049051D85412BB5D0A22FFC4 /* Pods-Dots_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B78EA548BD68573ADC8D4FAE87EE323 /* Pods-Dots_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -68,9 +71,12 @@
 		921D5D531E93280200F8DAD5 /* DotsSessionConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotsSessionConfiguration.swift; sourceTree = "<group>"; };
 		921D5D551E93282D00F8DAD5 /* DotsError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotsError.swift; sourceTree = "<group>"; };
 		921D5D571E93284500F8DAD5 /* ConcurrentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentOperation.swift; sourceTree = "<group>"; };
-		921D5D591E93288C00F8DAD5 /* DataLoadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoadOperation.swift; sourceTree = "<group>"; };
-		921D5D5B1E9328B800F8DAD5 /* DataOperationS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataOperationS.swift; sourceTree = "<group>"; };
+		921D5D591E93288C00F8DAD5 /* DataLoadOperationAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoadOperationAsync.swift; sourceTree = "<group>"; };
+		921D5D5B1E9328B800F8DAD5 /* DataOperationSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataOperationSync.swift; sourceTree = "<group>"; };
 		921D5D5E1E9328FC00F8DAD5 /* UIImageViewExtinsion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtinsion.swift; sourceTree = "<group>"; };
+		92DCD1571E93E40600AE84FE /* Dot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
+		92DCD1591E93E70E00AE84FE /* Concurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concurrency.swift; sourceTree = "<group>"; };
+		92DCD15B1E93EA3500AE84FE /* DataLoadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoadOperation.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		97481BC4E78B9404F8598C412D73A45C /* Pods-Dots_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Dots_Tests.modulemap"; sourceTree = "<group>"; };
 		A7E8D3F3FBB6259CC23904E3DBB03AEB /* Pods-Dots_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Dots_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -181,8 +187,11 @@
 				921D5D531E93280200F8DAD5 /* DotsSessionConfiguration.swift */,
 				921D5D551E93282D00F8DAD5 /* DotsError.swift */,
 				921D5D571E93284500F8DAD5 /* ConcurrentOperation.swift */,
-				921D5D591E93288C00F8DAD5 /* DataLoadOperation.swift */,
-				921D5D5B1E9328B800F8DAD5 /* DataOperationS.swift */,
+				921D5D591E93288C00F8DAD5 /* DataLoadOperationAsync.swift */,
+				921D5D5B1E9328B800F8DAD5 /* DataOperationSync.swift */,
+				92DCD1571E93E40600AE84FE /* Dot.swift */,
+				92DCD1591E93E70E00AE84FE /* Concurrency.swift */,
+				92DCD15B1E93EA3500AE84FE /* DataLoadOperation.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -390,16 +399,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92DCD15C1E93EA3500AE84FE /* DataLoadOperation.swift in Sources */,
 				921D5D521E9327CE00F8DAD5 /* HTTPMethod.swift in Sources */,
 				4A3A707AE37AE0A76BB3A51D86994047 /* Dots-dummy.m in Sources */,
 				921D5D561E93282D00F8DAD5 /* DotsError.swift in Sources */,
 				921D5D581E93284500F8DAD5 /* ConcurrentOperation.swift in Sources */,
 				921D5D541E93280200F8DAD5 /* DotsSessionConfiguration.swift in Sources */,
-				921D5D5C1E9328B800F8DAD5 /* DataOperationS.swift in Sources */,
-				921D5D5A1E93288C00F8DAD5 /* DataLoadOperation.swift in Sources */,
+				921D5D5C1E9328B800F8DAD5 /* DataOperationSync.swift in Sources */,
+				921D5D5A1E93288C00F8DAD5 /* DataLoadOperationAsync.swift in Sources */,
+				92DCD15A1E93E70E00AE84FE /* Concurrency.swift in Sources */,
 				921D5D4D1E93275F00F8DAD5 /* Dots.swift in Sources */,
 				921D5D5F1E9328FC00F8DAD5 /* UIImageViewExtinsion.swift in Sources */,
 				921D5D501E93279E00F8DAD5 /* Reachability.swift in Sources */,
+				92DCD1581E93E40600AE84FE /* Dot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

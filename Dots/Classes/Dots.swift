@@ -10,10 +10,10 @@ import Foundation
 
 public typealias Parameters = [String: Any]
 public typealias HTTPHeaders = [String: String]
-public typealias ComplitionHandler = (Data?, URLResponse?, Error?) -> Void
+public typealias ComplitionHandler = (Dot) -> Void
 
 public class Dots {
-  public static let main = Dots()
+  public static let defualt = Dots()
   private var concurrentQueue = OperationQueue()
   
   private var maxConcurrentOperation: Int {
@@ -29,17 +29,34 @@ public class Dots {
   }
   
   public init () {
+    concurrentQueue.maxConcurrentOperationCount = self.maxConcurrentOperation
+  }
+  
+  public init(maxConcurrentRequests: Int) {
     concurrentQueue.maxConcurrentOperationCount = maxConcurrentOperation
   }
   
+  //TODO:- enable session configration
+  /*
+  public init(sessionConfigration: URLSessionConfiguration) {
+    
+  }
+  */
+  
   public func request(
-    _ url: URL,
+    _ url: String,
     method: HTTPMethod = .get,
     parameters: Parameters? = nil,
     headers: HTTPHeaders? = nil,
-    complitionHandler: ComplitionHandler?) {
+    concurrency: Concurrency = .async,
+    complitionHandler: ComplitionHandler? = nil) {
     
-    concurrentQueue.addOperation(DataLoadOperationS(url, method: method, parameters: parameters, headers: headers, complitionHandler: complitionHandler))
+    switch concurrency {
+    case .sync:
+      concurrentQueue.addOperation(DataLoadOperationSync(URL(string: url), method: method, parameters: parameters, headers: headers, complitionHandler: complitionHandler))
+    default:
+      concurrentQueue.addOperation(DataLoadOperationAsync(URL(string: url), method: method, parameters: parameters, headers: headers, complitionHandler: complitionHandler))
+    }
     
   }
 }

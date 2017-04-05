@@ -24,18 +24,15 @@ class ViewController: UIViewController {
   }
   
   func loadImage() {
-    let url = URL(string: "https://secret-ocean-30920.herokuapp.com/img.JPG")
-    
-    imageView.setImage(withURL: url!)
+    imageView.setImage(withURL: "https://secret-ocean-30920.herokuapp.com/img.JPG")
   }
   
   func loadText() {
-    let url = URL(string: "https://secret-ocean-30920.herokuapp.com/amr.json")
     
-    Dots.main.request(url!) { (data: Data?, response: URLResponse?, error: Error?) in
-      self.textView.text = self.JSONStringify(data: data)
+    Dots.defualt.request("https://secret-ocean-30920.herokuapp.com/amr.json") { (dot: Dot) in
+      self.textView.text = self.JSONStringify(data: dot.data)
     }
-    
+        
   }
   
   func JSONStringify(data: Data?) -> String {

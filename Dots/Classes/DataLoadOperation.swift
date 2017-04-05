@@ -8,54 +8,23 @@
 
 import Foundation
 
-internal class DataLoadOperation: ConcurrentOperation {
-  private var url: URL?
-  private var complitionHandler: ComplitionHandler?
-  private var method: HTTPMethod
-  private var parameters: Parameters?
-  private var headers: HTTPHeaders?
+internal protocol DataLoadProtocol {
+  var url: URL? {get set}
+  var complitionHandler: ComplitionHandler? {get set}
+  var method: HTTPMethod {get set}
+  var parameters: Parameters? {get set}
+  var headers: HTTPHeaders? {get set}
   
-  init(
-    _ url: URL?,
-    method: HTTPMethod = .get,
-    parameters: Parameters? = nil,
-    headers: HTTPHeaders? = nil,
-    complitionHandler: ComplitionHandler? = nil ) {
-    self.url = url
-    self.method = method
-    self.parameters = parameters
-    self.headers = headers
-    self.complitionHandler = complitionHandler
-    super.init()
-  }
-  
-  override func main() {
-    guard let url = url else { self.state = .finished; return }
-    guard let session = createSession(configuration: .defualt) else { self.state = .finished; return }
-    
-    var originalRequest = URLRequest(url: url)
-    originalRequest.httpMethod = method.rawValue
-    originalRequest.allHTTPHeaderFields = headers
-    
-    do {
-      let encodedURLRequest = try encode(&originalRequest, with: parameters)
-      session.dataTask(with: encodedURLRequest, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
-        DispatchQueue.main.async {
-          guard let complitionHandler = self.complitionHandler else { self.state = .finished; return }
-          complitionHandler(data, response, error)
-          self.state = .finished
-        }
-      }).resume()
-    } catch {
-      guard let complitionHandler = self.complitionHandler else { self.state = .finished; return }
-      complitionHandler(nil, nil, error)
-      self.state = .finished
-    }
-    
-    
-  }
-  
-  public func encode( _ urlRequest: inout URLRequest, with parameters: Parameters?) throws -> URLRequest {
+  func encode( _ urlRequest: inout URLRequest, with parameters: Parameters?) throws -> URLRequest
+  func escape(_ string: String) -> String
+  func queryComponents(fromKey key: String, value: Any) -> [(String, String)]
+  func query(_ parameters: [String: Any]) -> String
+  func configuringCach() -> URLCache?
+  func createSession(configuration: DotsSessionConfiguration) -> URLSession?
+}
+
+internal extension DataLoadProtocol {
+  internal func encode( _ urlRequest: inout URLRequest, with parameters: Parameters?) throws -> URLRequest {
     
     guard let parameters = parameters else { return urlRequest }
     
@@ -80,7 +49,7 @@ internal class DataLoadOperation: ConcurrentOperation {
     return urlRequest
   }
   
-  public func escape(_ string: String) -> String {
+  internal func escape(_ string: String) -> String {
     let generalDelimitersToEncode = ":#[]@"
     let subDelimitersToEncode = "!$&'()*+,;="
     
@@ -94,7 +63,7 @@ internal class DataLoadOperation: ConcurrentOperation {
     return escaped
   }
   
-  public func queryComponents(fromKey key: String, value: Any) -> [(String, String)] {
+  internal func queryComponents(fromKey key: String, value: Any) -> [(String, String)] {
     var components: [(String, String)] = []
     
     if let dictionary = value as? [String: Any] {
@@ -114,7 +83,7 @@ internal class DataLoadOperation: ConcurrentOperation {
     return components
   }
   
-  private func query(_ parameters: [String: Any]) -> String {
+  internal func query(_ parameters: [String: Any]) -> String {
     var components: [(String, String)] = []
     
     for key in parameters.keys.sorted(by: <) {
@@ -126,7 +95,7 @@ internal class DataLoadOperation: ConcurrentOperation {
   }
   
   
-  private func configuringCach() -> URLCache? {
+  internal func configuringCach() -> URLCache? {
     guard let cachesDiroctoryURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else { return nil }
     let cacheURL = cachesDiroctoryURL.appendingPathComponent(url!.absoluteString)
     var diskPath = cacheURL.path
@@ -140,7 +109,7 @@ internal class DataLoadOperation: ConcurrentOperation {
     return cache
   }
   
-  private func createSession(configuration: DotsSessionConfiguration) -> URLSession? {
+  internal func createSession(configuration: DotsSessionConfiguration) -> URLSession? {
     let sessionConfiguration: URLSessionConfiguration!
     switch configuration {
     case .defualt:
