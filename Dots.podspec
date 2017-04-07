@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Dots'
-  s.version          = '0.3.2'
+  s.version          = '0.3.3'
   s.summary          = 'Lightweight iOS Concurrent Networking Framework.'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Lightweight iOS Concurrent Networking Framework that will make developing your App easire and more responsive
+Lightweight iOS Concurrent Networking Framework that will make developing your Apps easire and faster
                        DESC
 
   s.homepage         = 'https://github.com/iAmrSalman/Dots'
@@ -28,7 +28,7 @@ Lightweight iOS Concurrent Networking Framework that will make developing your A
   s.source           = { :git => 'https://github.com/iAmrSalman/Dots.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/@iAmrSalman'
 
-  s.ios.deployment_target = '9.3'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'Dots/Classes/**/*'
   
