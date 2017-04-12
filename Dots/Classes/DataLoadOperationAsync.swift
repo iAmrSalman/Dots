@@ -20,6 +20,7 @@ internal class DataLoadOperationAsync: ConcurrentOperation, DataLoadProtocol {
     method: HTTPMethod = .get,
     parameters: Parameters? = nil,
     headers: HTTPHeaders? = nil,
+    qualityOfService: QualityOfService = .default,
     complitionHandler: ComplitionHandler? = nil ) {
     self.url = url
     self.method = method
@@ -27,6 +28,7 @@ internal class DataLoadOperationAsync: ConcurrentOperation, DataLoadProtocol {
     self.headers = headers
     self.complitionHandler = complitionHandler
     super.init()
+    self.qualityOfService = qualityOfService
   }
   
   override func main() {

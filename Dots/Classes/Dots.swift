@@ -49,13 +49,14 @@ public class Dots {
     parameters: Parameters? = nil,
     headers: HTTPHeaders? = nil,
     concurrency: Concurrency = .async,
+    qualityOfService: QualityOfService = .default,
     complitionHandler: ComplitionHandler? = nil) {
     
     switch concurrency {
     case .sync:
-      concurrentQueue.addOperation(DataLoadOperationSync(URL(string: url), method: method, parameters: parameters, headers: headers, complitionHandler: complitionHandler))
+      concurrentQueue.addOperation(DataLoadOperationSync(URL(string: url), method: method, parameters: parameters, headers: headers, qualityOfService: qualityOfService, complitionHandler: complitionHandler))
     default:
-      concurrentQueue.addOperation(DataLoadOperationAsync(URL(string: url), method: method, parameters: parameters, headers: headers, complitionHandler: complitionHandler))
+      concurrentQueue.addOperation(DataLoadOperationAsync(URL(string: url), method: method, parameters: parameters, headers: headers, qualityOfService: qualityOfService, complitionHandler: complitionHandler))
     }
     
   }

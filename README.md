@@ -37,6 +37,7 @@ Dots.defualt.request("<URL>") { (dot: Dot) in
   print(dot.response) // HTTP URL response
   print(dot.data)     // server data
   print(dot.error)    // Errors from request processing
+  print(dot.json)     // JSON dictionary [String: Any]
 
 }
 ```
