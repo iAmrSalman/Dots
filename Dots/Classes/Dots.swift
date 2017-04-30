@@ -47,6 +47,7 @@ public class Dots {
     _ url: String,
     method: HTTPMethod = .get,
     parameters: Parameters? = nil,
+    encoding: ParameterEncoding = .url,
     headers: HTTPHeaders? = nil,
     concurrency: Concurrency = .async,
     qualityOfService: QualityOfService = .default,
@@ -54,9 +55,9 @@ public class Dots {
     
     switch concurrency {
     case .sync:
-      concurrentQueue.addOperation(DataLoadOperationSync(URL(string: url), method: method, parameters: parameters, headers: headers, qualityOfService: qualityOfService, complitionHandler: complitionHandler))
+      concurrentQueue.addOperation(DataLoadOperationSync(URL(string: url), method: method, parameters: parameters, encoding: encoding, headers: headers, qualityOfService: qualityOfService, complitionHandler: complitionHandler))
     default:
-      concurrentQueue.addOperation(DataLoadOperationAsync(URL(string: url), method: method, parameters: parameters, headers: headers, qualityOfService: qualityOfService, complitionHandler: complitionHandler))
+      concurrentQueue.addOperation(DataLoadOperationAsync(URL(string: url), method: method, parameters: parameters, encoding: encoding, headers: headers, qualityOfService: qualityOfService, complitionHandler: complitionHandler))
     }
     
   }

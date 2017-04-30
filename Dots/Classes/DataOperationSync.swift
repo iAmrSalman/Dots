@@ -13,18 +13,21 @@ internal class DataLoadOperationSync: Operation, DataLoadProtocol {
   internal var complitionHandler: ComplitionHandler?
   internal var method: HTTPMethod
   internal var parameters: Parameters?
+  internal var encoding: ParameterEncoding
   internal var headers: HTTPHeaders?
   
   init(
     _ url: URL?,
     method: HTTPMethod = .get,
     parameters: Parameters? = nil,
+    encoding: ParameterEncoding = .url,
     headers: HTTPHeaders? = nil,
     qualityOfService: QualityOfService = .default,
     complitionHandler: ComplitionHandler? = nil ) {
     self.url = url
     self.method = method
     self.parameters = parameters
+    self.encoding = encoding
     self.headers = headers
     self.complitionHandler = complitionHandler
     super.init()
@@ -40,7 +43,15 @@ internal class DataLoadOperationSync: Operation, DataLoadProtocol {
     originalRequest.allHTTPHeaderFields = headers
     
     do {
-      let encodedURLRequest = try encode(&originalRequest, with: parameters)
+      let encodedURLRequest: URLRequest
+      
+      switch encoding {
+      case .url:
+        encodedURLRequest = try urlEncode(&originalRequest, with: parameters)
+      case .json:
+        encodedURLRequest = try jsonEncode(&originalRequest, with: parameters)
+      }
+      
       session.dataTask(with: encodedURLRequest, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
         DispatchQueue.main.async {
           guard let complitionHandler = self.complitionHandler else { return }

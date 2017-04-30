@@ -15,7 +15,8 @@ internal protocol DataLoadProtocol {
   var parameters: Parameters? {get set}
   var headers: HTTPHeaders? {get set}
   
-  func encode( _ urlRequest: inout URLRequest, with parameters: Parameters?) throws -> URLRequest
+  func urlEncode( _ urlRequest: inout URLRequest, with parameters: Parameters?) throws -> URLRequest
+  func jsonEncode(_ urlRequest: inout URLRequest, with parameters: Parameters?, options: JSONSerialization.WritingOptions) throws -> URLRequest 
   func escape(_ string: String) -> String
   func queryComponents(fromKey key: String, value: Any) -> [(String, String)]
   func query(_ parameters: [String: Any]) -> String
@@ -24,7 +25,7 @@ internal protocol DataLoadProtocol {
 }
 
 internal extension DataLoadProtocol {
-  internal func encode( _ urlRequest: inout URLRequest, with parameters: Parameters?) throws -> URLRequest {
+  internal func urlEncode( _ urlRequest: inout URLRequest, with parameters: Parameters?) throws -> URLRequest {
     
     guard let parameters = parameters else { return urlRequest }
     
@@ -48,6 +49,26 @@ internal extension DataLoadProtocol {
     
     return urlRequest
   }
+  
+  internal func jsonEncode(_ urlRequest: inout URLRequest, with parameters: Parameters?, options: JSONSerialization.WritingOptions = []) throws -> URLRequest {
+    
+    guard let parameters = parameters else { return urlRequest }
+    
+    do {
+      let data = try JSONSerialization.data(withJSONObject: parameters, options: options)
+      
+      if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+      }
+      
+      urlRequest.httpBody = data
+    } catch {
+      throw DotsError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
+    }
+    
+    return urlRequest
+  }
+
   
   internal func escape(_ string: String) -> String {
     let generalDelimitersToEncode = ":#[]@"

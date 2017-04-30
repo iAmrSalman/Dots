@@ -71,15 +71,57 @@ Dots.defualt.request("<URL>", method: .delete)
 
 The `request` method parameter defaults to `.get`.
 
-### Request With URL-Encoded Parameters
+### Parameter Encoding
+
+#### GET Request With URL-Encoded Parameters
 
 ```swift
 let parameters: Parameters = ["foo": "bar"]
 
-// All three of these calls are equivalent
-Dots.defualt.request("<URL>", parameters: parameters)
+Dots.defualt.request("<URL>", parameters: parameters) // defaults url encoding
+Dots.defualt.request("<URL>", parameters: parameters, encoding: .url)
 
 // <URL>?foo=bar
+```
+
+#### POST Request With URL-Encoded Parameters
+
+```swift
+let parameters: Parameters = [
+  "foo": "bar",
+  "baz": ["a", 1],
+  "qux": [
+    "x": 1,
+    "y": 2,
+    "z": 3
+  ]
+]
+
+Dots.defualt.request("<URL>", method: .post, parameters: parameters) // defaults url encoding
+Dots.defualt.request("<URL>", method: .post, parameters: parameters, encoding: .url)
+
+//httpHeader: Content-Type: application/x-www-form-urlencoded; charset=utf-8
+
+// HTTP body: foo=bar&baz[]=a&baz[]=1&qux[x]=1&qux[y]=2&qux[z]=3
+
+```
+
+#### POST Request With JSON-Encoded Parameters
+
+```swift
+let parameters: Parameters = [
+  "foo": [1,2,3],
+  "bar": [
+    "baz": "qux"
+  ]
+]
+
+Dots.defualt.request("<URL>", method: .post, parameters: parameters, encoding: .json)
+
+//HTTP header: Content-Type: application/json
+
+// HTTP body: {"foo": [1, 2, 3], "bar": {"baz": "qux"}}
+
 ```
 
 ### HTTP Headers
