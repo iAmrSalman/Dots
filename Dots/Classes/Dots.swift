@@ -53,6 +53,13 @@ public class Dots {
     qualityOfService: QualityOfService = .default,
     complitionHandler: ComplitionHandler? = nil) {
     
+    if maxConcurrentOperation == 0 {
+      if let complitionHandler = complitionHandler {
+        complitionHandler(Dot(data: nil, response: nil, error: DotsError.offline))
+      }
+      return
+    }
+    
     switch concurrency {
     case .sync:
       concurrentQueue.addOperation(DataLoadOperationSync(URL(string: url), method: method, parameters: parameters, encoding: encoding, headers: headers, qualityOfService: qualityOfService, complitionHandler: complitionHandler))
