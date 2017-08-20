@@ -29,19 +29,22 @@ class ViewController: UIViewController {
   func loadText() {
     
     Dots.defualt.request("https://secret-ocean-30920.herokuapp.com/amr.json") { (dot: Dot) in
-      guard let json = dot.json else {
-        self.textView.text = "nothing"
-        return
-      }
-      var str = "{\n"
-      for (key, value) in json {
-        str += "\(key): \(value),\n"
-      }
-      str += "}"
-      
-      self.textView.text = str
-    }
+      if dot.error != nil {
+        self.textView.text = dot.error?.localizedDescription
+      } else {
+        guard let json = dot.json else {
+          self.textView.text = "nothing"
+          return
+        }
+        var str = "{\n"
+        for (key, value) in json {
+          str += "\(key): \(value),\n"
+        }
+        str += "}"
         
+        self.textView.text = str
+      }
+    }
   }
   
 }
