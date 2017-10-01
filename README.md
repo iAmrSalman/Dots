@@ -48,15 +48,15 @@ The `HTTPMethod` enumeration lists the HTTP methods:
 
 ```swift
 public enum HTTPMethod: String {
-case options = "OPTIONS"
-case get     = "GET"
-case head    = "HEAD"
-case post    = "POST"
-case put     = "PUT"
-case patch   = "PATCH"
-case delete  = "DELETE"
-case trace   = "TRACE"
-case connect = "CONNECT"
+  case options = "OPTIONS"
+  case get     = "GET"
+  case head    = "HEAD"
+  case post    = "POST"
+  case put     = "PUT"
+  case patch   = "PATCH"
+  case delete  = "DELETE"
+  case trace   = "TRACE"
+  case connect = "CONNECT"
 }
 ```
 
@@ -170,7 +170,7 @@ imageView.setImage(withURL: "<URL>")
 
 ## Author
 
-Amr Salman, iamrsalman@gmail.com
+iAmrSalman, iamrsalman@gmail.com
 
 ## License
 
