@@ -1,22 +1,24 @@
 {
   "name": "Dots",
-  "version": "0.1.0",
-  "summary": "A short description of Dots.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Amr Salman/Dots",
+  "version": "0.4.2",
+  "summary": "Lightweight iOS Concurrent Networking Framework.",
+  "description": "Lightweight iOS Concurrent Networking Framework that will make developing your Apps easire and faster",
+  "homepage": "https://github.com/iAmrSalman/Dots",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Amr Salman": "iamrsalman@gmail.com"
+    "iAmrSalman": "iamrsalman@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Amr Salman/Dots.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/iAmrSalman/Dots.git",
+    "tag": "0.4.2"
   },
+  "social_media_url": "https://twitter.com/@iAmrSalman",
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
-  "source_files": "Dots/Classes/**/*"
+  "source_files": "Dots/Classes/**/*",
+  "frameworks": "UIKit"
 }
