@@ -24,7 +24,7 @@ Lightweight iOS Concurrent Networking Framework that will make developing your A
   s.homepage         = 'https://github.com/iAmrSalman/Dots'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Amr Salman' => 'iamrsalman@gmail.com' }
+  s.author           = { 'iAmrSalman' => 'iamrsalman@gmail.com' }
   s.source           = { :git => 'https://github.com/iAmrSalman/Dots.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/@iAmrSalman'
 
