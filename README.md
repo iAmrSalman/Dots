@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/Dots.svg?style=flat)](http://cocoapods.org/pods/Dots)
 [![License](https://img.shields.io/cocoapods/l/Dots.svg?style=flat)](http://cocoapods.org/pods/Dots)
 [![Platform](https://img.shields.io/cocoapods/p/Dots.svg?style=flat)](http://cocoapods.org/pods/Dots)
-[![Swift 3.1 compatible](https://img.shields.io/badge/Language-Swift3-blue.svg?style=flat)](https://developer.apple.com/swift)
+[![Swift 4.0 compatible](https://img.shields.io/badge/Language-Swift4-orange.svg?style=flat)](https://developer.apple.com/swift)
 
 ## Example
 
@@ -14,7 +14,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 - iOS 10.0+
 - Xcode 8.0+
-- Swift 3.0+
+- Swift 4.0+
 
 ## Installation
 
