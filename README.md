@@ -6,6 +6,8 @@
 [![Platform](https://img.shields.io/cocoapods/p/Dots.svg?style=flat)](http://cocoapods.org/pods/Dots)
 [![Swift 4.0 compatible](https://img.shields.io/badge/Language-Swift4-orange.svg?style=flat)](https://developer.apple.com/swift)
 
+![banner](https://user-images.githubusercontent.com/10261166/31719687-919810aa-b414-11e7-9834-b8463be9e334.png)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
