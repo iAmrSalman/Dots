@@ -1,5 +1,5 @@
 PODS:
-  - Dots (0.4.2)
+  - Dots (0.4.3)
 
 DEPENDENCIES:
   - Dots (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Dots: 4a9c1007353e7a99932e497ee7baae3657a9d8c9
+  Dots: a1ff1ea4361083012b6584a7ca52edbdc82ac10d
 
 PODFILE CHECKSUM: e4c9b40db8cd72126b3d47b5af04e47cf6bb2b46
 

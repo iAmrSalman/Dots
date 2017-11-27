@@ -1,6 +1,6 @@
 {
   "name": "Dots",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "summary": "Lightweight iOS Concurrent Networking Framework.",
   "description": "Lightweight iOS Concurrent Networking Framework that will make developing your Apps easire and faster",
   "homepage": "https://github.com/iAmrSalman/Dots",
@@ -13,11 +13,11 @@
   },
   "source": {
     "git": "https://github.com/iAmrSalman/Dots.git",
-    "tag": "0.4.2"
+    "tag": "0.4.3"
   },
   "social_media_url": "https://twitter.com/@iAmrSalman",
   "platforms": {
-    "ios": "10.0"
+    "ios": "9.0"
   },
   "source_files": "Dots/Classes/**/*",
   "frameworks": "UIKit"

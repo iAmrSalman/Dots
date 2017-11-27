@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Dots'
-  s.version          = '0.4.3'
+  s.version          = '0.4.4'
   s.summary          = 'Lightweight iOS Concurrent Networking Framework.'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Lightweight iOS Concurrent Networking Framework that will make developing your A
   s.source           = { :git => 'https://github.com/iAmrSalman/Dots.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/@iAmrSalman'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'Dots/Classes/**/*'
   
