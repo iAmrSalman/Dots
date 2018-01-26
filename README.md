@@ -144,7 +144,6 @@ Dots.defualt.request("<URL>", headers: headers)
 Choosing between Asynchronous and Synchronous is supported
 
 ```swift
-
 Dots.defualt.request("<URL>", concurrency: .async) // concurrency defaults to `.async`
 Dots.defualt.request("<URL>", concurrency: .sync)
 ```
@@ -156,9 +155,7 @@ Customizing Maximum concurrent requests executing simultaneously is supported.
 The defualt is checking if device is on cellular connection, maximum concurrent requests is restricted to 2, while Wi-Fi is executing up to 6 simultaneous requests.
 
 ```swift
-
 let customDots = Dots(maxConcurrentOperation: <Int>)
-
 customDots.request("<URL>") 
 ```
 
