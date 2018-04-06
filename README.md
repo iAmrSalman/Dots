@@ -169,7 +169,7 @@ imageView.setImage(withURL: "<URL>")
 
 ## Author
 
-iAmrSalman, iamrsalman@gmail.com
+Amr Salman, iamrsalman@gmail.com
 
 ## License
 

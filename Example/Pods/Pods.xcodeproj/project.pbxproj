@@ -428,7 +428,7 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iAmrSalman.Pods-Dots-Example";
 				PRODUCT_NAME = Pods_Dots_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -459,7 +459,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Dots/Dots.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iamrsalman.Dots;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iAmrSalman.Dots;
 				PRODUCT_NAME = Dots;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -495,7 +495,7 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iAmrSalman.Pods-Dots-Tests";
 				PRODUCT_NAME = Pods_Dots_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -524,7 +524,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Dots/Dots.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iamrsalman.Dots;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iAmrSalman.Dots;
 				PRODUCT_NAME = Dots;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -559,7 +559,7 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iAmrSalman.Pods-Dots-Example";
 				PRODUCT_NAME = Pods_Dots_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -708,7 +708,7 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iAmrSalman.Pods-Dots-Tests";
 				PRODUCT_NAME = Pods_Dots_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
