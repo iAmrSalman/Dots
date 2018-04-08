@@ -49,7 +49,6 @@
 		92AA80D6207AC13D00B3145B /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80AF207AC13D00B3145B /* ConcurrentOperation.swift */; };
 		92AA80D7207AC13D00B3145B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80B0207AC13D00B3145B /* Reachability.swift */; };
 		92AA80D8207AC13D00B3145B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80B0207AC13D00B3145B /* Reachability.swift */; };
-		92AA80D9207AC13D00B3145B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80B0207AC13D00B3145B /* Reachability.swift */; };
 		92AA80DA207AC13D00B3145B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80B0207AC13D00B3145B /* Reachability.swift */; };
 		92AA80DF207AC13D00B3145B /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80B2207AC13D00B3145B /* HTTPMethod.swift */; };
 		92AA80E0207AC13D00B3145B /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80B2207AC13D00B3145B /* HTTPMethod.swift */; };
@@ -60,6 +59,10 @@
 		92AA80E6207AC27800B3145B /* Dots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80E3207AC27800B3145B /* Dots.swift */; };
 		92AA80E7207AC27800B3145B /* Dots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80E3207AC27800B3145B /* Dots.swift */; };
 		92AA80EC207AC7A500B3145B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80EB207AC7A500B3145B /* UIImageExtension.swift */; };
+		92AA80ED207ACCCA00B3145B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80B0207AC13D00B3145B /* Reachability.swift */; };
+		92AA80EF207AD5B000B3145B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80EB207AC7A500B3145B /* UIImageExtension.swift */; };
+		92AA80F2207AD74E00B3145B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80EB207AC7A500B3145B /* UIImageExtension.swift */; };
+		92AA80F3207AD74F00B3145B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80EB207AC7A500B3145B /* UIImageExtension.swift */; };
 		DD7502881C68FEDE006590AF /* Dots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* Dots.framework */; };
 		DD7502921C690C7A006590AF /* Dots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* Dots.framework */; };
 /* End PBXBuildFile section */
@@ -558,13 +561,14 @@
 			files = (
 				92AA80D1207AC13D00B3145B /* DataLoadOperation.swift in Sources */,
 				92AA80C9207AC13D00B3145B /* ParameterEncoding.swift in Sources */,
+				92AA80ED207ACCCA00B3145B /* Reachability.swift in Sources */,
 				92AA80D5207AC13D00B3145B /* ConcurrentOperation.swift in Sources */,
 				92AA80E6207AC27800B3145B /* Dots.swift in Sources */,
 				92AA80C1207AC13D00B3145B /* DotsError.swift in Sources */,
 				92AA80BD207AC13D00B3145B /* DataLoadOperationAsync.swift in Sources */,
 				92AA80B5207AC13D00B3145B /* DataOperationSync.swift in Sources */,
 				92AA80B9207AC13D00B3145B /* Concurrency.swift in Sources */,
-				92AA80D9207AC13D00B3145B /* Reachability.swift in Sources */,
+				92AA80F3207AD74F00B3145B /* UIImageExtension.swift in Sources */,
 				92AA80E1207AC13D00B3145B /* HTTPMethod.swift in Sources */,
 				92AA80C5207AC13D00B3145B /* Dot.swift in Sources */,
 				92AA80CD207AC13D00B3145B /* DotsSessionConfiguration.swift in Sources */,
@@ -584,6 +588,7 @@
 				92AA80B6207AC13D00B3145B /* DataOperationSync.swift in Sources */,
 				92AA80BA207AC13D00B3145B /* Concurrency.swift in Sources */,
 				92AA80DA207AC13D00B3145B /* Reachability.swift in Sources */,
+				92AA80EF207AD5B000B3145B /* UIImageExtension.swift in Sources */,
 				92AA80E2207AC13D00B3145B /* HTTPMethod.swift in Sources */,
 				92AA80C6207AC13D00B3145B /* Dot.swift in Sources */,
 				92AA80CE207AC13D00B3145B /* DotsSessionConfiguration.swift in Sources */,
@@ -603,6 +608,7 @@
 				92AA80B4207AC13D00B3145B /* DataOperationSync.swift in Sources */,
 				92AA80B8207AC13D00B3145B /* Concurrency.swift in Sources */,
 				92AA80D8207AC13D00B3145B /* Reachability.swift in Sources */,
+				92AA80F2207AD74E00B3145B /* UIImageExtension.swift in Sources */,
 				92AA80E0207AC13D00B3145B /* HTTPMethod.swift in Sources */,
 				92AA80C4207AC13D00B3145B /* Dot.swift in Sources */,
 				92AA80CC207AC13D00B3145B /* DotsSessionConfiguration.swift in Sources */,

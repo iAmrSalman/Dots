@@ -6,9 +6,10 @@
 //
 //
 
+#if !os(watchOS)
+
 import Foundation
 import SystemConfiguration
-import UIKit
 import SystemConfiguration.CaptiveNetwork
 
 public let ReachabilityStatusChangedNotification = "ReachabilityStatusChangedNotification"
@@ -83,16 +84,25 @@ extension ReachabilityStatus {
   public init(reachabilityFlags flags: SCNetworkReachabilityFlags) {
     let connectionRequired = flags.contains(.connectionRequired)
     let isReachable = flags.contains(.reachable)
+    
+    #if os(iOS)
     let isWWAN = flags.contains(.isWWAN)
+    #endif
     
     if !connectionRequired && isReachable {
-      if isWWAN {
-        self = .Online(.WWAN)
-      } else {
+        #if os(iOS)
+        if isWWAN {
+            self = .Online(.WWAN)
+        } else {
+            self = .Online(.WiFi)
+        }
+        #else
         self = .Online(.WiFi)
-      }
+        #endif
     } else {
       self =  .Offline
     }
   }
 }
+
+#endif

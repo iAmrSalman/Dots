@@ -17,6 +17,9 @@ public class Dots {
     private var concurrentQueue = OperationQueue()
     
     private var maxConcurrentOperation: Int {
+        #if os(watchOS)
+        return 2
+        #else
         let networkStatus = Reachability().connectionStatus()
         switch networkStatus {
         case .Unknown, .Offline:
@@ -26,6 +29,7 @@ public class Dots {
         case .Online(.WiFi):
             return 6
         }
+        #endif
     }
     
     public init () {

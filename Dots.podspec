@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.author             = { "Amr Salman" => "iamrsalman@gmail.com" }
   s.social_media_url   = "https://twitter.com/@iAmrSalman"
   s.ios.deployment_target = "8.0"
-  s.osx.deployment_target = "10.9"
+  s.osx.deployment_target = "10.10"
   s.watchos.deployment_target = "2.0"
   s.tvos.deployment_target = "9.0"
   s.source       = { :git => "https://github.com/iAmrSalman/Dots.git", :tag => s.version.to_s }
