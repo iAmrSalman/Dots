@@ -13,17 +13,70 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-- iOS 9.0+
+- iOS 8.0+ / macOS 10.10+ / tvOS 9.0+ / watchOS 2.0+
 - Xcode 8.0+
 - Swift 4.0+
 
 ## Installation
 
-Dots is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+
+### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+> CocoaPods 1.1+ is required to build StorageManager.
+
+To integrate StorageManager into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod "Dots"
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+    pod 'Dots'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate StorageManager into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "iAmrSalman/Dots" ~> 0.4.7
+```
+
+Run `carthage update` to build the framework and drag the built `Dots.framework` into your Xcode project.
+
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but StorageManager does support its use on supported platforms. 
+
+Once you have your Swift package set up, adding StorageManager as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/iAmrSalman/Dots.git", from: "0.4.7")
+]
 ```
 
 ## Usage

@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         }
         var str = "{\n"
         for (key, value) in json {
-          str += "\(key): \(value),\n"
+          str += "  \(key): \(value),\n"
         }
         str += "}"
         

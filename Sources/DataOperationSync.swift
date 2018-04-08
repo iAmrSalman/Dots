@@ -1,6 +1,6 @@
 //
-//  DataLoadOperation.swift
-//  Pods
+//  DataOperationS.swift
+//  Dots
 //
 //  Created by Amr Salman on 4/4/17.
 //
@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal class DataLoadOperationAsync: ConcurrentOperation, DataLoadProtocol {
+internal class DataLoadOperationSync: Operation, DataLoadProtocol {
   internal var url: URL?
   internal var complitionHandler: ComplitionHandler?
   internal var method: HTTPMethod
@@ -35,8 +35,8 @@ internal class DataLoadOperationAsync: ConcurrentOperation, DataLoadProtocol {
   }
   
   override func main() {
-    guard let url = url else { self.state = .finished; return }
-    guard let session = createSession(configuration: .defualt) else { self.state = .finished; return }
+    guard let url = url else { return }
+    guard let session = createSession(configuration: .defualt) else { return }
     
     var originalRequest = URLRequest(url: url)
     originalRequest.httpMethod = method.rawValue
@@ -54,15 +54,13 @@ internal class DataLoadOperationAsync: ConcurrentOperation, DataLoadProtocol {
       
       session.dataTask(with: encodedURLRequest, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
         DispatchQueue.main.async {
-          guard let complitionHandler = self.complitionHandler else { self.state = .finished; return }
+          guard let complitionHandler = self.complitionHandler else { return }
           complitionHandler(Dot(data: data, response: response, error: error))
-          self.state = .finished
         }
       }).resume()
     } catch {
-      guard let complitionHandler = self.complitionHandler else { self.state = .finished; return }
+      guard let complitionHandler = self.complitionHandler else { return }
       complitionHandler(Dot(data: nil, response: nil, error: error))
-      self.state = .finished
     }
     
     
