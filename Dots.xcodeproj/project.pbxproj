@@ -59,6 +59,7 @@
 		92AA80E5207AC27800B3145B /* Dots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80E3207AC27800B3145B /* Dots.swift */; };
 		92AA80E6207AC27800B3145B /* Dots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80E3207AC27800B3145B /* Dots.swift */; };
 		92AA80E7207AC27800B3145B /* Dots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80E3207AC27800B3145B /* Dots.swift */; };
+		92AA80EC207AC7A500B3145B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA80EB207AC7A500B3145B /* UIImageExtension.swift */; };
 		DD7502881C68FEDE006590AF /* Dots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* Dots.framework */; };
 		DD7502921C690C7A006590AF /* Dots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* Dots.framework */; };
 /* End PBXBuildFile section */
@@ -106,6 +107,7 @@
 		92AA80B0207AC13D00B3145B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		92AA80B2207AC13D00B3145B /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		92AA80E3207AC27800B3145B /* Dots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dots.swift; sourceTree = "<group>"; };
+		92AA80EB207AC7A500B3145B /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* Dots.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Dots.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* DotsTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DotsTests.plist; sourceTree = "<group>"; };
 		DD75027A1C68FCFC006590AF /* Dots-macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dots-macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +218,7 @@
 				92AA80B2207AC13D00B3145B /* HTTPMethod.swift */,
 				92AA80AC207AC13D00B3145B /* ParameterEncoding.swift */,
 				92AA80A8207AC13D00B3145B /* Concurrency.swift */,
+				92AA80EB207AC7A500B3145B /* UIImageExtension.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				92AA80B3207AC13D00B3145B /* DataOperationSync.swift in Sources */,
 				92AA80B7207AC13D00B3145B /* Concurrency.swift in Sources */,
 				92AA80D7207AC13D00B3145B /* Reachability.swift in Sources */,
+				92AA80EC207AC7A500B3145B /* UIImageExtension.swift in Sources */,
 				92AA80DF207AC13D00B3145B /* HTTPMethod.swift in Sources */,
 				92AA80C3207AC13D00B3145B /* Dot.swift in Sources */,
 				92AA80CB207AC13D00B3145B /* DotsSessionConfiguration.swift in Sources */,

@@ -1,16 +1,16 @@
 PODS:
-  - Dots (0.4.3)
+  - Dots (0.5.0)
 
 DEPENDENCIES:
   - Dots (from `../`)
 
 EXTERNAL SOURCES:
   Dots:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  Dots: a1ff1ea4361083012b6584a7ca52edbdc82ac10d
+  Dots: 77344d0f8eab55441ef2c5053c2c0f406db18caa
 
 PODFILE CHECKSUM: e4c9b40db8cd72126b3d47b5af04e47cf6bb2b46
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.0

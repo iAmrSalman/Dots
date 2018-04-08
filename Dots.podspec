@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Dots"
-  s.version      = "0.4.7"
+  s.version      = "0.5.0"
   s.summary      = "Lightweight iOS Concurrent Networking Framework"
   s.description  = <<-DESC
     Lightweight iOS Concurrent Networking Framework that will make developing your Apps easire and faster
