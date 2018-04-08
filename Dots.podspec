@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "Dots"
-  s.version      = "0.5.0"
-  s.summary      = "Lightweight iOS Concurrent Networking Framework"
+  s.version      = "0.5.1"
+  s.summary      = "Lightweight Concurrent Networking Framework"
   s.description  = <<-DESC
-    Lightweight iOS Concurrent Networking Framework that will make developing your Apps easire and faster
+    Lightweight Concurrent Networking Framework that will make developing your Apps easire and faster
   DESC
   s.homepage     = "https://github.com/iAmrSalman/Dots"
   s.license      = { :type => "MIT", :file => "LICENSE" }

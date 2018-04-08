@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/Dots.svg?style=flat)](http://cocoapods.org/pods/Dots)
 [![Platform](https://img.shields.io/cocoapods/p/Dots.svg?style=flat)](http://cocoapods.org/pods/Dots)
 
-![banner](https://user-images.githubusercontent.com/10261166/31719687-919810aa-b414-11e7-9834-b8463be9e334.png)
+![banner](https://user-images.githubusercontent.com/10261166/38473777-8ec657f2-3b95-11e8-9aa0-a07065d65ce2.png)
 
 ## Example
 
@@ -62,7 +62,7 @@ $ brew install carthage
 To integrate StorageManager into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "iAmrSalman/Dots" ~> 0.4.7
+github "iAmrSalman/Dots" ~> 0.5.0
 ```
 
 Run `carthage update` to build the framework and drag the built `Dots.framework` into your Xcode project.
@@ -75,7 +75,7 @@ Once you have your Swift package set up, adding StorageManager as a dependency i
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/iAmrSalman/Dots.git", from: "0.4.7")
+    .package(url: "https://github.com/iAmrSalman/Dots.git", from: "0.5.0")
 ]
 ```
 
